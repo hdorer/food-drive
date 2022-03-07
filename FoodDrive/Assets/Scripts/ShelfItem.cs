@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShelfItem : MonoBehaviour {
     Vector3 resetPoint;
+    [SerializeField] ItemType type;
 
     // Start is called before the first frame update
     void Start() {
@@ -29,6 +30,7 @@ public class ShelfItem : MonoBehaviour {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
         foreach(Collider2D c in colliders) {
             if(c.gameObject.tag == "Cart") {
+                c.gameObject.GetComponent<Cart>().addItem(type);
                 Destroy(gameObject);
                 return;
             }
