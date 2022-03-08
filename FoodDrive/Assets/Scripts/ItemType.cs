@@ -4,5 +4,5 @@ public enum ItemType {
     GREEN_CAPSULE,
     RED_CIRCLE,
     ORANGE_SQUARE,
-    NUM_ITEMS
+    NUM_ITEMS // This value will always be the number of items.  Useful for initializing the static ItemData array.
 }
