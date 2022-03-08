@@ -3,9 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cart : MonoBehaviour {
-    List<ItemType> items = new List<ItemType>();
+    List<ShelfItem> items = new List<ShelfItem>();
+    public List<ShelfItem> Items { get { return items; } }
 
-    public void addItem(ItemType type) {
-        items.Add(type);
+    [SerializeField] CartMenu menu;
+
+    void OnMouseDown() {
+        menu.show();
+    }
+
+    public void addItem(ShelfItem item) {
+        items.Add(item);
+    }
+
+    public void removeItem(int index) {
+        items[index].gameObject.SetActive(true);
+        items.RemoveAt(index);
     }
 }
