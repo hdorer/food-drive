@@ -10,7 +10,8 @@ public class ShelfItem : MonoBehaviour {
     void Start() {
         resetPoint = transform.position; // Set the reset point to the object's starting position.
 
-        data = ItemData.ITEM_DATA_LIST[(int)type]; // Grab the data for this particular object from the static list based on the value from the enum.
+        data = GameManager.ItemDataList[(int)type]; // Grab the data for this particular object from the static list based on the value from the enum.
+        GetComponent<SpriteRenderer>().sprite = data.sprite;
     }
 
     public void OnMouseDrag() {

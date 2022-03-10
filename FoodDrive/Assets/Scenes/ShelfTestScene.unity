@@ -607,7 +607,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea69b6457036c441be6157c5ba29fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cart: {fileID: 0}
+  cart: {fileID: 2067485906}
+  sfx:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sprites:
+  - {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  - {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  - {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
 --- !u!4 &173491835
 Transform:
   m_ObjectHideFlags: 0
@@ -1711,7 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312baffc043af0c4eb7134ab8d3fb6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
+  type: 2
 --- !u!61 &451407671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2205,7 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312baffc043af0c4eb7134ab8d3fb6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
+  type: 2
 --- !u!61 &693181536
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2704,7 +2712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312baffc043af0c4eb7134ab8d3fb6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 2
 --- !u!58 &906829812
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4332,7 +4340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312baffc043af0c4eb7134ab8d3fb6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
+  type: 2
 --- !u!61 &1423488115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4534,7 +4542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312baffc043af0c4eb7134ab8d3fb6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 2
 --- !u!58 &1490292090
 CircleCollider2D:
   m_ObjectHideFlags: 0
