@@ -496,9 +496,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cart: {fileID: 2067485906}
   sfx:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 0d6fcf501b3e6204e9e8a67678ccdefc, type: 3}
+  - {fileID: 8300000, guid: f50d359187452334b89477c4b05a339f, type: 3}
+  - {fileID: 8300000, guid: 2464df6292a6adc458dfdbab8d680f77, type: 3}
   sprites:
   - {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   - {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
