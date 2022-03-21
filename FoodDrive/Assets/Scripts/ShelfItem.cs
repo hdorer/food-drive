@@ -6,6 +6,7 @@ public class ShelfItem : MonoBehaviour {
     Vector3 resetPoint; // Where the GameObject goes after the player drops it.
     [SerializeField] ItemType type; // What type the item is.
     ItemData data; // Item data associated with this particular object.
+    public ItemData Data { get { return data; } }
 
     void Start() {
         resetPoint = transform.position; // Set the reset point to the object's starting position.
