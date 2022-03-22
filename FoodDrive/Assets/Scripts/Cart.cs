@@ -9,6 +9,7 @@ public class Cart : MonoBehaviour {
 
     [SerializeField] int maxMoney;
     int money;
+    public int Money { get { return money; } }
 
     [SerializeField] CartMenu menu;
     [SerializeField] Text moneyText;

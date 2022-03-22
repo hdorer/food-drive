@@ -8,11 +8,16 @@ public class ShelfItem : MonoBehaviour {
     ItemData data; // Item data associated with this particular object.
     public ItemData Data { get { return data; } }
 
+    [SerializeField] bool useThisSprite; // Band-aid fix; ItemData class needs refactor.
+
     void Start() {
         resetPoint = transform.position; // Set the reset point to the object's starting position.
 
         data = GameManager.ItemDataList[(int)type]; // Grab the data for this particular object from the static list based on the value from the enum.
-        GetComponent<SpriteRenderer>().sprite = data.sprite;
+        if (!useThisSprite)
+        {
+            GetComponent<SpriteRenderer>().sprite = data.sprite;
+        }
     }
 
     public void OnMouseDrag() {
