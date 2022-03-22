@@ -26,5 +26,7 @@ public class GameManager : MonoBehaviour {
             new ItemData(false, false, true, 2, SFX[3], Sprites[3]),
             new ItemData(true, true, false, 2, SFX[4], Sprites[4])
         };
+
+        Debug.Log("this point is reached");
     }
 }
