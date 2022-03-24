@@ -7,17 +7,12 @@ public class ShelfItem : MonoBehaviour {
     [SerializeField] ItemType type; // What type the item is.
     ItemData data; // Item data associated with this particular object.
     public ItemData Data { get { return data; } }
-
-    [SerializeField] bool useThisSprite; // Band-aid fix; ItemData class needs refactor.
+    [SerializeField] AudioClip sfx;
 
     void Start() {
         resetPoint = transform.position; // Set the reset point to the object's starting position.
 
         data = GameManager.ItemDataList[(int)type]; // Grab the data for this particular object from the static list based on the value from the enum.
-        if (!useThisSprite)
-        {
-            GetComponent<SpriteRenderer>().sprite = data.sprite;
-        }
     }
 
     public void OnMouseDrag() {
