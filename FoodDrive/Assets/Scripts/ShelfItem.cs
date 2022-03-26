@@ -8,6 +8,8 @@ public class ShelfItem : MonoBehaviour {
     ItemData data; // Item data associated with this particular object.
     public ItemData Data { get { return data; } }
 
+    [SerializeField] bool brokenCan;
+
     AudioSource aSource;
 
     void Start() {
@@ -15,6 +17,10 @@ public class ShelfItem : MonoBehaviour {
 
         data = GameManager.ItemDataList[(int)type]; // Grab the data for this particular object from the static list based on the value from the enum.
         aSource = GetComponent<AudioSource>();
+
+        if(transform.childCount > 0) {
+            transform.GetChild(0).gameObject.SetActive(brokenCan);
+        }
     }
 
     void OnMouseEnter() {
