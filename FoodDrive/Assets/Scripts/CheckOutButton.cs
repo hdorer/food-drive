@@ -5,6 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CheckOutButton : MonoBehaviour {
     void OnMouseDown() {
-        Debug.Log("Score: " + GameManager.calculateScore() + "/" + GameManager.Cart.MaxMoney);
+        SceneManager.LoadScene("EndScene");
     }
 }
