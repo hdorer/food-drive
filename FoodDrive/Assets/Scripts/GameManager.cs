@@ -5,11 +5,21 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     static GameManager instance;
 
-    [SerializeField] Cart cart;
-    public static Cart Cart { get { return instance.cart; } }
+    Cart cart;
+    public static Cart Cart {
+        get { return instance.cart; }
+        set {
+            if(instance.cart == null) {
+                instance.cart = value;
+            }
+        }
+    }
 
     ItemData[] itemDataList;
     public static ItemData[] ItemDataList { get { return instance.itemDataList; } }
+
+    int itemSet;
+    public static int ItemSet { get { return instance.itemSet; } set { instance.itemSet = value; } }
 
     void Awake() {
         instance = this;
@@ -43,5 +53,7 @@ public class GameManager : MonoBehaviour {
             new ItemData(false, false, false, 12), // RAW_PRODUCE
             new ItemData(false, false, false, 3), // DRINKS
         };
+
+        DontDestroyOnLoad(gameObject);
     }
 }

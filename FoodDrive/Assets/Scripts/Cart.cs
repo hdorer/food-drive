@@ -14,6 +14,10 @@ public class Cart : MonoBehaviour {
     [SerializeField] CartMenu menu;
     [SerializeField] Text moneyText;
 
+    void Awake() {
+        GameManager.Cart = this;
+    }
+
     void Start() {
         money = maxMoney;
     }

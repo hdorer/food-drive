@@ -15,4 +15,26 @@ public struct ItemData {
         this.dinner = dinner;
         this.price = price;
     }
+
+    public bool onList(int list) {
+        switch(list) {
+            case 0:
+                if(breakfast) {
+                    return true;
+                }
+                break;
+            case 1:
+                if(lunch) {
+                    return true;
+                }
+                break;
+            case 2:
+                if(dinner) {
+                    return true;
+                }
+                break;
+        }
+
+        return false;
+    }
 }
