@@ -56,4 +56,16 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
     }
+
+    public static int calculateScore() {
+        int score = 0;
+
+        foreach(ShelfItem i in instance.cart.Items) {
+            if(!i.Broken && i.Data.onList(instance.itemSet)) {
+                score += i.Data.price;
+            }
+        }
+
+        return score;
+    }
 }

@@ -8,6 +8,7 @@ public class Cart : MonoBehaviour {
     public List<ShelfItem> Items { get { return items; } }
 
     [SerializeField] int maxMoney;
+    public int MaxMoney { get { return maxMoney; } }
     int money;
     public int Money { get { return money; } }
 

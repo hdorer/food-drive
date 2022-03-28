@@ -8,7 +8,8 @@ public class ShelfItem : MonoBehaviour {
     ItemData data; // Item data associated with this particular object.
     public ItemData Data { get { return data; } }
 
-    [SerializeField] bool brokenCan;
+    [SerializeField] bool broken;
+    public bool Broken { get { return broken; } }
 
     AudioSource aSource;
 
@@ -19,7 +20,7 @@ public class ShelfItem : MonoBehaviour {
         aSource = GetComponent<AudioSource>();
 
         if(transform.childCount > 0) {
-            transform.GetChild(0).gameObject.SetActive(brokenCan);
+            transform.GetChild(0).gameObject.SetActive(broken);
         }
     }
 
