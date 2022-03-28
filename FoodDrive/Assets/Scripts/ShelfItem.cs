@@ -47,8 +47,9 @@ public class ShelfItem : MonoBehaviour {
         foreach(Collider2D c in colliders) {
             // If the collider is on the cart, add the item to the cart and deactivate the object.
             if(c.gameObject.tag == "Cart") {
-                c.gameObject.GetComponent<Cart>().addItem(this);
-                gameObject.SetActive(false);
+                if(c.gameObject.GetComponent<Cart>().addItem(this)) {
+                    gameObject.SetActive(false);
+                }
             }
         }
         
