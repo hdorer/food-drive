@@ -28,11 +28,16 @@ public class Cart : MonoBehaviour {
         menu.show();
     }
 
-    public void addItem(ShelfItem item) {
-        // Add the given ShelfItem to the list.
-        money -= item.Data.price;
-        moneyText.text = "$" + money;
-        items.Add(item);
+    public bool addItem(ShelfItem item) {
+        // Add the given ShelfItem to the list if the player has enough money.
+        if(money >= item.Data.price) {
+            money -= item.Data.price;
+            moneyText.text = "$" + money;
+            items.Add(item);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void removeItem(int index) {
