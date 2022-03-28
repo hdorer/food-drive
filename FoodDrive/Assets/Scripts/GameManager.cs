@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour {
             new ItemData(false, false, false, 10), // BULK_RICE
             new ItemData(false, false, false, 4), // CANDY
             new ItemData(false, false, false, 12), // RAW_PRODUCE
-            new ItemData(false, false, false, 8), // SUGARY_DRINKS
+            new ItemData(false, false, false, 3), // DRINKS
         };
     }
 }
